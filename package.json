@@ -1,0 +1,29 @@
+{
+  "name": "bx-grid-system",
+  "version": "0.0.1",
+  "description": "BX Grid System",
+  "main": "index.js",
+  "repository": "git@github.com:bx-design/bx-grid-system.git",
+  "author": "BX Creative Studio",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn build-sass && yarn build-autoprefix && yarn build-cleancss",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output dist/bx-grid.css dist/bx-grid.css",
+    "build-cleancss": "cleancss -o dist/bx-grid.min.css dist/bx-grid.css",
+    "build-sass": "node-sass --output-style expanded --source-map true scss/bx-grid.scss dist/bx-grid.css",
+    "clean": "rimraf dist",
+    "deploy": "yarn clean && yarn build",
+    "start": "yarn build-sass -- --watch",
+    "format": "prettier --check 'scss/**/*.scss'",
+    "format:fix": "prettier --write 'scss/**/*.scss'"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "clean-css-cli": "^5.2.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2"
+  }
+}
