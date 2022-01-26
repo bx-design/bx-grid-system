@@ -82,29 +82,29 @@
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {
       // Provide basic `.col-{bp}` classes for equal-width flexbox columns
-      .col#{$infix} {
+      .bx-col#{$infix} {
         flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
       }
 
-      .row-cols#{$infix}-auto > * {
+      .bx-row-cols#{$infix}-auto > * {
         @include make-col-auto();
       }
 
       @if $grid-row-columns > 0 {
         @for $i from 1 through $grid-row-columns {
-          .row-cols#{$infix}-#{$i} {
+          .bx-row-cols#{$infix}-#{$i} {
             @include row-cols($i);
           }
         }
       }
 
-      .col#{$infix}-auto {
+      .bx-col#{$infix}-auto {
         @include make-col-auto();
       }
 
       @if $columns > 0 {
         @for $i from 1 through $columns {
-          .col#{$infix}-#{$i} {
+          .bx-col#{$infix}-#{$i} {
             @include make-col($i, $columns);
           }
         }
@@ -113,7 +113,7 @@
         @for $i from 0 through ($columns - 1) {
           @if not($infix == '' and $i == 0) {
             // Avoid emitting useless .offset-0
-            .offset#{$infix}-#{$i} {
+            .bx-offset#{$infix}-#{$i} {
               @include make-col-offset($i, $columns);
             }
           }
@@ -124,13 +124,13 @@
       //
       // Make use of `.g-*`, `.gx-*` or `.gy-*` utilities to change spacing between the columns.
       @each $key, $value in $gutters {
-        .g#{$infix}-#{$key},
-        .gx#{$infix}-#{$key} {
+        .bx-g#{$infix}-#{$key},
+        .bx-gx#{$infix}-#{$key} {
           --#{$variable-prefix}gutter-x: #{$value};
         }
 
-        .g#{$infix}-#{$key},
-        .gy#{$infix}-#{$key} {
+        .bx-g#{$infix}-#{$key},
+        .bx-gy#{$infix}-#{$key} {
           --#{$variable-prefix}gutter-y: #{$value};
         }
       }

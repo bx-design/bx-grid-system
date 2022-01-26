@@ -3,7 +3,7 @@
 // Rows contain your columns.
 
 @if $enable-grid-classes {
-  .row {
+  .bx-row {
     @include make-row();
 
     > * {

@@ -4,14 +4,15 @@ $utilities: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-merge(
   (
-    'align': (
+    'bx-align': (
       property: vertical-align,
-      class: align,
+      class: bx-align,
       values: baseline top middle bottom text-bottom text-top,
     ),
-    'float': (
+    'bx-float': (
       responsive: true,
       property: float,
+      class: bx-float,
       values: (
         start: left,
         end: right,
@@ -19,57 +20,59 @@ $utilities: map-merge(
       ),
     ),
     // scss-docs-start utils-display
-    'display':
+    'bx-display':
       (
         responsive: true,
         print: true,
         property: display,
-        class: d,
+        class: bx-d,
         values: inline inline-block block grid table table-row table-cell flex
           inline-flex none,
       ),
     // Flex utilities
-    'flex':
+    'bx-flex':
       (
         responsive: true,
         property: flex,
+        class: bx-flex,
         values: (
           fill: 1 1 auto,
         ),
       ),
-    'flex-direction': (
+    'bx-flex-direction': (
       responsive: true,
       property: flex-direction,
-      class: flex,
+      class: bx-flex,
       values: row column row-reverse column-reverse,
     ),
-    'flex-grow': (
+    'bx-flex-grow': (
       responsive: true,
       property: flex-grow,
-      class: flex,
+      class: bx-flex,
       values: (
         grow-0: 0,
         grow-1: 1,
       ),
     ),
-    'flex-shrink': (
+    'bx-flex-shrink': (
       responsive: true,
       property: flex-shrink,
-      class: flex,
+      class: bx-flex,
       values: (
         shrink-0: 0,
         shrink-1: 1,
       ),
     ),
-    'flex-wrap': (
+    'bx-flex-wrap': (
       responsive: true,
       property: flex-wrap,
-      class: flex,
+      class: bx-flex,
       values: wrap nowrap wrap-reverse,
     ),
-    'justify-content': (
+    'bx-justify-content': (
       responsive: true,
       property: justify-content,
+      class: bx-justify-content,
       values: (
         start: flex-start,
         end: flex-end,
@@ -79,9 +82,10 @@ $utilities: map-merge(
         evenly: space-evenly,
       ),
     ),
-    'align-items': (
+    'bx-align-items': (
       responsive: true,
       property: align-items,
+      class: bx-align-items,
       values: (
         start: flex-start,
         end: flex-end,
@@ -90,9 +94,10 @@ $utilities: map-merge(
         stretch: stretch,
       ),
     ),
-    'align-content': (
+    'bx-align-content': (
       responsive: true,
       property: align-content,
+      class: bx-align-content,
       values: (
         start: flex-start,
         end: flex-end,
@@ -102,9 +107,10 @@ $utilities: map-merge(
         stretch: stretch,
       ),
     ),
-    'align-self': (
+    'bx-align-self': (
       responsive: true,
       property: align-self,
+      class: bx-align-self,
       values: (
         auto: auto,
         start: flex-start,
@@ -114,9 +120,10 @@ $utilities: map-merge(
         stretch: stretch,
       ),
     ),
-    'order': (
+    'bx-order': (
       responsive: true,
       property: order,
+      class: bx-order,
       values: (
         first: -1,
         0: 0,
@@ -129,11 +136,11 @@ $utilities: map-merge(
       ),
     ),
     // Margin utilities
-    'margin':
+    'bx-margin':
       (
         responsive: true,
         property: margin,
-        class: m,
+        class: bx-m,
         values:
           map-merge(
             $spacers,
@@ -142,10 +149,10 @@ $utilities: map-merge(
             )
           ),
       ),
-    'margin-x': (
+    'bx-margin-x': (
       responsive: true,
       property: margin-right margin-left,
-      class: mx,
+      class: bx-mx,
       values:
         map-merge(
           $spacers,
@@ -154,10 +161,10 @@ $utilities: map-merge(
           )
         ),
     ),
-    'margin-y': (
+    'bx-margin-y': (
       responsive: true,
       property: margin-top margin-bottom,
-      class: my,
+      class: bx-my,
       values:
         map-merge(
           $spacers,
@@ -166,10 +173,10 @@ $utilities: map-merge(
           )
         ),
     ),
-    'margin-top': (
+    'bx-margin-top': (
       responsive: true,
       property: margin-top,
-      class: mt,
+      class: bx-mt,
       values:
         map-merge(
           $spacers,
@@ -178,10 +185,10 @@ $utilities: map-merge(
           )
         ),
     ),
-    'margin-end': (
+    'bx-margin-end': (
       responsive: true,
       property: margin-right,
-      class: me,
+      class: bx-me,
       values:
         map-merge(
           $spacers,
@@ -190,10 +197,10 @@ $utilities: map-merge(
           )
         ),
     ),
-    'margin-bottom': (
+    'bx-margin-bottom': (
       responsive: true,
       property: margin-bottom,
-      class: mb,
+      class: bx-mb,
       values:
         map-merge(
           $spacers,
@@ -202,10 +209,10 @@ $utilities: map-merge(
           )
         ),
     ),
-    'margin-start': (
+    'bx-margin-start': (
       responsive: true,
       property: margin-left,
-      class: ms,
+      class: bx-ms,
       values:
         map-merge(
           $spacers,
@@ -215,96 +222,96 @@ $utilities: map-merge(
         ),
     ),
     // Negative margin utilities
-    'negative-margin':
+    'bx-negative-margin':
       (
         responsive: true,
         property: margin,
-        class: m,
+        class: bx-m,
         values: $negative-spacers,
       ),
-    'negative-margin-x': (
+    'bx-negative-margin-x': (
       responsive: true,
       property: margin-right margin-left,
-      class: mx,
+      class: bx-mx,
       values: $negative-spacers,
     ),
-    'negative-margin-y': (
+    'bx-negative-margin-y': (
       responsive: true,
       property: margin-top margin-bottom,
-      class: my,
+      class: bx-my,
       values: $negative-spacers,
     ),
-    'negative-margin-top': (
+    'bx-negative-margin-top': (
       responsive: true,
       property: margin-top,
-      class: mt,
+      class: bx-mt,
       values: $negative-spacers,
     ),
-    'negative-margin-end': (
+    'bx-negative-margin-end': (
       responsive: true,
       property: margin-right,
-      class: me,
+      class: bx-me,
       values: $negative-spacers,
     ),
-    'negative-margin-bottom': (
+    'bx-negative-margin-bottom': (
       responsive: true,
       property: margin-bottom,
-      class: mb,
+      class: bx-mb,
       values: $negative-spacers,
     ),
-    'negative-margin-start': (
+    'bx-negative-margin-start': (
       responsive: true,
       property: margin-left,
-      class: ms,
+      class: bx-ms,
       values: $negative-spacers,
     ),
     // Padding utilities
-    'padding':
+    'bx-padding':
       (
         responsive: true,
         property: padding,
-        class: p,
+        class: bx-p,
         values: $spacers,
       ),
-    'padding-x': (
+    'bx-padding-x': (
       responsive: true,
       property: padding-right padding-left,
-      class: px,
+      class: bx-px,
       values: $spacers,
     ),
-    'padding-y': (
+    'bx-padding-y': (
       responsive: true,
       property: padding-top padding-bottom,
-      class: py,
+      class: bx-py,
       values: $spacers,
     ),
-    'padding-top': (
+    'bx-padding-top': (
       responsive: true,
       property: padding-top,
-      class: pt,
+      class: bx-pt,
       values: $spacers,
     ),
-    'padding-end': (
+    'bx-padding-end': (
       responsive: true,
       property: padding-right,
-      class: pe,
+      class: bx-pe,
       values: $spacers,
     ),
-    'padding-bottom': (
+    'bx-padding-bottom': (
       responsive: true,
       property: padding-bottom,
-      class: pb,
+      class: bx-pb,
       values: $spacers,
     ),
-    'padding-start': (
+    'bx-padding-start': (
       responsive: true,
       property: padding-left,
-      class: ps,
+      class: bx-ps,
       values: $spacers,
     ),
-    'visibility': (
+    'bx-visibility': (
       property: visibility,
-      class: null,
+      class: bx,
       values: (
         visible: visible,
         invisible: hidden,
